@@ -22,7 +22,7 @@ python eval/oracle.py --selftest # オラクル自身を検証（②でFAILが�
 
 ## エージェントの動かし方
 
-`agent/monte-carlo-shuffle-agent.md` の指示で `candidate.py` に `shuffle(xs)` を実装し、`python eval/oracle.py --candidate candidate` で採点。candidate が無くても `reference` で全工程を再現できます。
+`.claude/agents/monte-carlo-shuffle-agent.md` の指示で `candidate.py` に `shuffle(xs)` を実装し、`python eval/oracle.py --candidate candidate` で採点。candidate が無くても `reference` で全工程を再現できます。
 
 ## しくみ
 
@@ -41,7 +41,7 @@ flowchart TD
 固定種で多数回実行し、(妥当性) 毎回が並べ替え ＋ (一様性) 位置ごとカイ二乗 < 閾値。
 
 ## ファイル構成
-- `agent/…md` … エージェント定義／`eval/oracle.py` … 統計オラクル（`--selftest` 内蔵）
+- `.claude/agents/…md` … エージェント定義／`eval/oracle.py` … 統計オラクル（`--selftest` 内蔵）
 - `eval/corpus/reference.py` … 正例／`broken_*.py` … 既知バグ（陰性対照）
 - `design/design.md` … 設計の考え方
 
